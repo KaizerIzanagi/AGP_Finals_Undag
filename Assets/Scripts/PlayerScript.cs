@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float move;
+    public TargetJoint2D joint;
     public float baseSpeed, runSpeedMult;
 
     private Rigidbody2D rb;
@@ -11,12 +12,19 @@ public class PlayerScript : MonoBehaviour
     {
         // Collects Rigidbody from Player
         rb = GetComponent<Rigidbody2D>();
+        joint = GetComponent<TargetJoint2D>();
     }
 
     void Update()
     {
         HorizontalMove();
 
+        /*
+        if (Input.GetMouseButtonDown(0))
+        {
+            joint.enabled = true;
+        }
+        */
     }
 
     // Handles Horizontal Movement
@@ -42,5 +50,10 @@ public class PlayerScript : MonoBehaviour
         {
             baseSpeed = Mathf.Clamp(baseSpeed / runSpeedMult, 5, 10);
         }
+    }
+
+    public void JointTargeting()
+    {
+        joint.target = new Vector2(1, 1);
     }
 }

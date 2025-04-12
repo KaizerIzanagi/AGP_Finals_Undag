@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Grappler
   - 
-  - 
-  - 
+  - Grappleable
   - 
   - 
   - 
@@ -41,3 +41,29 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: New Layer 1
+    uniqueID: 4117249161
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 3006241519
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 1057505181
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 3270796787
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1519193673
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 3530944709
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 3439107583
+    locked: 0
+  - name: Grappleable
+    uniqueID: 3306750843
+    locked: 0
+  m_RenderingLayers:
+  - Default
