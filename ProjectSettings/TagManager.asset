@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Killbrick
+  - UI
+  - Map
+  - Death Tutorial
+  - Emergency
+  - Current Level
+  - Platform
+  - Victory
+  - VictoryScreen
+  - DeathScreen
+  - Timer
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,9 +23,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Grappler
-  - 
+  - Ungrappleable
   - Grappleable
+  - 
   - 
   - 
   - 
@@ -50,6 +62,9 @@ TagManager:
   - name: New Layer 3
     uniqueID: 1057505181
     locked: 0
+  - name: New Layer 7
+    uniqueID: 3439107583
+    locked: 0
   - name: New Layer 4
     uniqueID: 3270796787
     locked: 0
@@ -58,12 +73,6 @@ TagManager:
     locked: 0
   - name: New Layer 6
     uniqueID: 3530944709
-    locked: 0
-  - name: New Layer 7
-    uniqueID: 3439107583
-    locked: 0
-  - name: Grappleable
-    uniqueID: 3306750843
     locked: 0
   m_RenderingLayers:
   - Default

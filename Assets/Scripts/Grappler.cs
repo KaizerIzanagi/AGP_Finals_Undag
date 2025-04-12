@@ -3,32 +3,39 @@ using UnityEngine;
 public class Grappler : MonoBehaviour
 {
     [Header("Scripts Ref:")]
+    // Animation of Rope
     public GrapplingScript grappleRope;
 
     [Header("Layers Settings:")]
-    [SerializeField] private bool grappleToAll = false;
-    [SerializeField] private int grappableLayerNumber = 9;
+    // Which layer it can grapple to.
+    [SerializeField] private int grappableLayerNumber = 7;
 
     [Header("Main Camera:")]
+    // Main Camera
     public Camera m_camera;
 
     [Header("Transform Ref:")]
+    // Self Explainitory
     public Transform gunHolder;
     public Transform gunPivot;
     public Transform firePoint;
 
     [Header("Physics Ref:")]
+    // Component Grabber
     public SpringJoint2D m_springJoint2D;
     public Rigidbody2D m_rigidbody;
 
     [Header("Rotation:")]
+    // For the Grappling Nozzle Rotation around the character.
     [SerializeField] private bool rotateOverTime = true;
     [Range(0, 60)][SerializeField] private float rotationSpeed = 4;
 
     [Header("Distance:")]
+    // Range of Grapple Distance
     [SerializeField] private bool hasMaxDistance = false;
     [SerializeField] private float maxDistnace = 20;
 
+    //Differentiator of LaunchTypes
     private enum LaunchType
     {
         Transform_Launch,
@@ -45,8 +52,8 @@ public class Grappler : MonoBehaviour
     [SerializeField] private float targetDistance = 3;
     [SerializeField] private float targetFrequncy = 1;
 
-    [HideInInspector] public Vector2 grapplePoint;
-    [HideInInspector] public Vector2 grappleDistanceVector;
+    public Vector2 grapplePoint;
+    public Vector2 grappleDistanceVector;
 
     private void Start()
     {
@@ -117,7 +124,7 @@ public class Grappler : MonoBehaviour
         if (Physics2D.Raycast(firePoint.position, distanceVector.normalized))
         {
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
-            if (_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
+            if (_hit.transform.gameObject.layer == grappableLayerNumber)
             {
                 if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
                 {
